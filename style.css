@@ -1,0 +1,22 @@
+#movie {
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+    line-height:150%;
+}
+#title {
+    float: left;
+    width: 350px;
+}
+#format {
+    float: left;
+    width: 250px;
+}
+#rating {
+    float: left;
+    width: 200px;
+}
+#genre {
+    float: left;
+    width: 200px;
+}
