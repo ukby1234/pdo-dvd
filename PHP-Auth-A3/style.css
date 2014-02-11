@@ -1,0 +1,30 @@
+#song {
+    margin: 0 auto;
+    width: 1100px;
+    overflow: hidden;
+    line-height:150%;
+    padding:70px 50px 50px 50px
+}
+#title {
+    float: left;
+    width: 350px;
+}
+#price {
+    float: left;
+    width: 250px;
+}
+#artist {
+    float: left;
+    width: 300px;
+}
+#genre {
+    float: left;
+    width: 200px;
+}
+#flash_message{
+    float: left;
+}
+#top_right{
+    float:right;
+    height: 50px;
+}
