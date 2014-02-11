@@ -18,7 +18,7 @@ class SongQuery {
 		return $this;
 	}
 
-	public function withGenre($genre="") {
+	public function withGenre() {
 		$this->sql = $this->sql . "INNER JOIN genres ON genres.id = songs.genre_id ";
 		return $this;
 	}

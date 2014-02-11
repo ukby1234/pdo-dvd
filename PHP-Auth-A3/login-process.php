@@ -10,6 +10,14 @@
 	$password = $request->request->get('password');
 	$auth = new Auth($pdo);
 	$session = new Session();
+	if (!is_null($session->get('username')) && !is_null($session->get('email'))) {
+		$response = new RedirectResponse('dashboard.php');
+		return $response->send();
+	}
+	if (is_null($username) || is_null($password)) {
+		$response = new RedirectResponse('login.php');
+		return $response->send();
+	}
 	if ($auth->attempt($username, $password)) {	
 		$session->start();
 		$session->set('username', $username);
