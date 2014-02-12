@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Login</title>
 </head>
 <body>
 	<?php

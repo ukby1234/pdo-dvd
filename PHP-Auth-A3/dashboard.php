@@ -25,7 +25,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Dashboard</title>
 </head>
 <link rel="stylesheet" href="style.css" type="text/css">
 <body>
