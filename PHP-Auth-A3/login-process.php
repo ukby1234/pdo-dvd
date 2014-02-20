@@ -10,11 +10,12 @@
 	$password = $request->request->get('password');
 	$auth = new Auth($pdo);
 	$session = new Session();
-	if (!is_null($session->get('username')) && !is_null($session->get('email'))) {
+	if (!is_null($session->get('username')) && !is_null($session->get('email')) && is_null($username) && is_null($password)) {
 		$response = new RedirectResponse('dashboard.php');
 		return $response->send();
 	}
 	if (is_null($username) || is_null($password)) {
+		$session->invalidate();
 		$response = new RedirectResponse('login.php');
 		return $response->send();
 	}
@@ -28,6 +29,7 @@
 		return $response->send();
 	}
 	else {
+		$session->invalidate();
 		$session->getFlashBag()->set('statusMessage', 'Incorrect credentials');
 		$response = new RedirectResponse('login.php');
 		return $response->send();
